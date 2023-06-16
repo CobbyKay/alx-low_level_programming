@@ -1,11 +1,20 @@
 #include <stdio.h>
+
 /**
- * main - Prints all single numbers from 0 to 9.
-(*
- * Return: 0 on success
- */
+* main - Print the alphabet in lowercase letters, except for e and q
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
- printf("0123456789\n");
- return (0);
+char letter;
+
+for (letter = 'a'; letter <= 'z'; letter++)
+{
+if (letter != 'e' && letter != 'q')
+putchar(letter);
+}
+putchar('\n');
+
+return (0);
 }

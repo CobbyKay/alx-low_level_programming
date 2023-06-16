@@ -1,18 +1,18 @@
 #include <stdio.h>
+
 /**
- * main - print alphabet from z-a.
-(*
- * Return: 0 on success
- */
+* main - Print all single digit numbers using only putchar
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
- char c = 'z';
+int digit;
 
- while (c >= 'a')
- {
-  putchar(c);
-  c--;
- }
- putchar('\n');
- return (0);
+for (digit = 0; digit < 10; digit++)
+putchar(digit + '0');
+
+putchar('\n');
+
+return (0);
 }

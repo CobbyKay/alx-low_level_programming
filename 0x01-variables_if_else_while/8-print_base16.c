@@ -1,24 +1,21 @@
 #include <stdio.h>
+
 /**
- * main - print numbers from 0-9 with , separating.
-(*
- * Return: 0 on success
- */
+* main - Print the numbers of base 16 in lowercase
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
- int i = '0';
+char digit;
 
- while (i <= '9')
- {
-  putchar(i);
-  if (i != '9')
-  {
-   putchar(',');
-   putchar(' ');
-  }
-  ++i;
- }
- putchar('\n');
- return (0);
+for (digit = '0'; digit <= '9'; digit++)
+putchar(digit);
 
+for (digit = 'a'; digit <= 'f'; digit++)
+putchar(digit);
+
+putchar('\n');
+
+return (0);
 }
