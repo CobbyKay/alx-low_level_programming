@@ -1,13 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-<<<<<<< HEAD
 int _putchar(char c);
-=======
-int _putchar(char c)
->>>>>>> bc426afaaa1e9b8c3c99b4215f0d29b4bd5dc454
 int _isupper(int c);
-int _isdigit(int c);
 int mul(int a, int b);
 void print_numbers(void);
 void print_most_numbers(void);
