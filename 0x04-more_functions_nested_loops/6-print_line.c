@@ -4,7 +4,7 @@
   *@n: number of times _ should be printed
   *Return: void
   */
-void print_line(int n);
+void print_line(int n)
 {
 	if (n <= '0')
 	{
