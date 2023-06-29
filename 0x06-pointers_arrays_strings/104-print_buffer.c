@@ -1,50 +1,50 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
+
 /**
-  *print_buffer - prints a buffer
-  *@b: character input
-  *@size: size of integer
-  */
+* print_buffer - prints buffer
+* @b: buffer
+* @size: size
+* Return: void
+*/
+
 void print_buffer(char *b, int size)
 {
+int o, j, i;
+
+o = 0;
+
 if (size <= 0)
 {
 printf("\n");
 return;
 }
-
-int i, j;
-
-unsigned char *buffer = (unsigned char *) b;
-
-for (i = 0; i < size; i += 10)
+while (o < size)
 {
-printf("%08x: ", i);
-
-for (j = i; j < i + 10; j++)
+j = size - o < 10 ? size - o : 10;
+printf("%08x: ", o);
+for (i = 0; i < 10; i++)
 {
-if (j < size)
-printf("%02x", buffer[j]);
+if (i < j)
+printf("%02x", *(b + o + i));
 else
 printf("  ");
-
-if (j % 2 != 0)
+if (i % 2)
+{
 printf(" ");
 }
-
-for (j = i; j < i + 10; j++)
-{
-if (j < size)
-{
-if (isprint(buffer[j]))
-printf("%c", buffer[j]);
-else
-printf(".");
 }
-}
+for (i = 0; i < j; i++)
+{
+int c = *(b + o + i);
 
+if (c < 32 || c > 132)
+{
+c = '.';
+}
+printf("%c", c);
+}
 printf("\n");
+o += 10;
 }
 }
-
