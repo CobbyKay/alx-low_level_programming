@@ -7,24 +7,6 @@
 */
 size_t free_listint_safe(listint_t **h)
 {
-listint_t *current = *h;
-listint_t *temp;
-size_t count = 0;
-
-while (current != NULL)
-{
-temp = current;
-current = current->next;
-free(temp);
-count++;
-
-if (current == *h)
-{
-*h = NULL;
-break;
+h++;
+return (0);
 }
-}
-
-return (count);
-}
-
